@@ -15,5 +15,7 @@ public class MenuItem {
 		return price;
 	}
 	
-	
+	public String toString() {
+		return name + ": " + price;
+	}
 }

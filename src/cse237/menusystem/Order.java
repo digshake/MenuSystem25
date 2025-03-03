@@ -25,4 +25,12 @@ public class Order {
 		}
 		return sum;
 	}
+	
+	public String toString() {
+		String result = "";
+		for(MenuItem item : orderItems) {
+			result += item + "\n";
+		}
+		return result;
+	}
 }

@@ -1,6 +1,7 @@
 package cse237.test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -64,5 +65,12 @@ public class OrderTest {
 		//use assertion(s) to verify results
 		assertEquals(17.50, actual, 0.005);
 
+	}
+	
+	@Test
+	public void testToString() {
+		testOrder.addItem(burger);
+		String orderText = testOrder.toString();
+		assertTrue(orderText.contains("burger"));
 	}
 }
